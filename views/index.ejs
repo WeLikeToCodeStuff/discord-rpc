@@ -22,12 +22,16 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+/*  width: 50%;*/
+}
+   .center {
+        text-align: center;
 }
 </style>
 </head>
 <body>
-<img src="https://cdn.discordapp.com/attachments/732587650799632456/828252843051057202/penguin_logo_neon_acolors.png" class="centerimg">
+<img src="https://cdn.discordapp.com/attachments/732587650799632456/828252843051057202/penguin_logo_neon_acolors.png" class="centerimg" style="width: 100; height: 100;">
+<h1 class="center">Discord RPC</h1>
 &nbsp&nbsp<h2>Presets</h2><br>
 &nbsp&nbsp<button class="btn btn-outline-success" onclick="chillwav()">ChillWav Status</button>
 <br>
@@ -45,7 +49,7 @@
 &nbsp&nbsp<label for="si" class="form-label">Small image</label><br>
 &nbsp&nbsp<input type="text" id="si" name="si" value="" class="form-control"><br><br>
 &nbsp&nbsp<input type="submit" value="Submit" class="btn btn-outline-success">
-</form> 
+</form>
 <script>
 function chillwav() {
   console.log('fetch sent - chillwav')
