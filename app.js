@@ -80,4 +80,4 @@ app.post('/custom', (req, res) => {
     res.sendStatus(200);
 });
 app.listen(80);
-console.log('Listening on port: 80');
+console.log('Listening on port: 80\n©' + new Date().getFullYear() + 'NeonDevelopment, SkepSickomode');
