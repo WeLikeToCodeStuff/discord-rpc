@@ -1,0 +1,69 @@
+<title>Custom discord status</title>
+<style>
+  body {
+    background-color: rgb(70, 70, 70);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+  }
+   input[type=text], select {
+    width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+   }
+   input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+   input[type=submit]:hover {
+  background-color: #45a049;
+}
+ button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+ }
+
+</style>
+<h2>Presets</h2><br>
+<button id="chillwav" onclick="chillwav()">ChillWav Status</button>
+<br>
+<br>
+<h2>Custom</h2><br>
+<form action="/custom" method="post">
+  <label for="ID">Client ID:</label><br>
+  <input type="text" id="ID" name="ID"><br>
+  <label for="fl">First line</label><br>
+  <input type="text" id="fl" name="fl"><br><br>
+  <label for="sl">Second line</label><br>
+  <input type="text" id="sl" name="sl"><br><br>
+  <label for="li">Large image (pp)</label><br>
+  <input type="text" id="li" name="li" value=""><br><br>
+  <label for="si">Small image (not pp, not mine atleast)</label><br>
+  <input type="text" id="si" name="si" value=""><br><br>
+  <input type="submit" value="Submit">
+</form> 
+<script>
+function chillwav() {
+  console.log('fetch sent - chillwav')
+  fetch('http://localhost/chillwav')
+  alert('Status set to ChillWav.')
+}
+</script>
