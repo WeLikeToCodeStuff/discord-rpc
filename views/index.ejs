@@ -11,23 +11,31 @@
 </style>
 </head>
 <body>
-<h2>Presets</h2><br>
-<button class="btn btn-outline-success" onclick="chillwav()">ChillWav Status</button>
+&nbsp&nbsp<h2>Presets</h2><br>
+&nbsp&nbsp<button class="btn btn-outline-success" onclick="chillwav()">ChillWav Status</button>
 <br>
 <br>
-<h2>Custom</h2><br>
+&nbsp&nbsp<h2>Custom</h2><br>
 <form action="/custom" method="post">
-  <label for="ID">Client ID:</label><br>
-  <input type="text" id="ID" name="ID"><br>
-  <label for="fl">First line</label><br>
-  <input type="text" id="fl" name="fl"><br><br>
-  <label for="sl">Second line</label><br>
-  <input type="text" id="sl" name="sl"><br><br>
-  <label for="li">Large image</label><br>
-  <input type="text" id="li" name="li" value=""><br><br>
-  <label for="si">Small image</label><br>
-  <input type="text" id="si" name="si" value=""><br><br>
-  <input type="submit" value="Submit" class="btn btn-outline-success">
+<label for="ID" class="form-label">Client ID:</label><br>
+<div class="input-group mb-3">
+<input type="text" id="ID" name="ID" class="form-control"><br>
+</div>
+<label for="fl" class="form-label">First line</label><br>
+<div class="input-group mb-3">
+<input type="text" id="fl" name="fl" class="form-control"><br><br>
+</div>
+<label for="sl" class="form-label">Second line</label><br>
+<div class="input-group mb-3">
+<input type="text" id="sl" name="sl" class="form-control"><br><br>
+</div>
+<label for="li" class="form-label">Large image</label><br>
+<input type="text" id="li" name="li" value="" class="form-control"><br><br>
+<label for="si" class="form-label">Small image</label><br>
+<div class="input-group mb-3">
+<input type="text" id="si" name="si" value="" class="form-control"><br><br>
+</div>
+<input type="submit" value="Submit" class="btn btn-outline-success">
 </form> 
 <script>
 function chillwav() {
