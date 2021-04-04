@@ -35,15 +35,6 @@ app.get('/chillwav', (req, res) => {
                 console.log('Real DJ - ' + presenter)
             }
             const chillwav = require('discord-rich-presence')('826874981828132905');
-            if (presenter == "Neon") {
-                chillwav.updatePresence({
-                    state: `Status: Currently Live`,
-                    details: `Song: ${myarr[1]}`,
-                    largeImageKey: `logo`,
-                    //smallImageKey: 'snek_small',
-                    instance: true
-                });  
-            } else {
                 chillwav.updatePresence({
                     state: `DJ: ${presenter}`,
                     details: `Song: ${myarr[1]}`,
@@ -51,7 +42,6 @@ app.get('/chillwav', (req, res) => {
                     //smallImageKey: 'snek_small',
                     instance: true
                 });  
-            }
          
             console.log()
             var obj = JSON.stringify(data)
