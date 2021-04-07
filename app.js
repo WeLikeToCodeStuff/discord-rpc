@@ -96,12 +96,12 @@ app.post('/custom', (req, res) => {
             else if (req.body.btncnt == '2') {
               activity.buttons = [
             {
-              "label": res.body.btnatxt,
-              "url": res.body.btnaurl
+              "label": req.body.btnatxt,
+              "url": req.body.btnaurl
             },
             {
-              "label": res.body.btnbtxt,
-              "url": res.body.btnburl
+              "label": req.body.btnbtxt,
+              "url": req.body.btnburl
             }
                  
           ];
