@@ -88,20 +88,20 @@ app.post('/custom', (req, res) => {
             if (req.body.btncnt == '1') {
               activity.buttons = [
             {
-              "label": res.body.btn1txt,
-              "url": res.body.btn1url
+              "label": res.body.btnatxt,
+              "url": res.body.btnaurl
             }
           ];
             }
             else if (req.body.btncnt == '2') {
               activity.buttons = [
             {
-              "label": res.body.btn1txt,
-              "url": res.body.btn1url
+              "label": res.body.btnatxt,
+              "url": res.body.btnaurl
             },
             {
-              "label": res.body.btn2txt,
-              "url": res.body.btn2url
+              "label": res.body.btnbtxt,
+              "url": res.body.btnburl
             }
                  
           ];
