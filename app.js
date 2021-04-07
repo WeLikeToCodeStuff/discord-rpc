@@ -105,7 +105,7 @@ app.post('/custom', (req, res) => {
             }
                  
           ];
-            } else if (req.body.btncnt == >2) {
+            } else if (req.body.btncnt == > 2) {
                 console.log('We all wish Discord supported more than 2 buttons. I have set the button count to 0.')
             } else if (isNaN(req.body.btncnt)) {
                console.log(req.body.btncnt + ' doesnt appear to be a number. I have set the button count to 0.') 
