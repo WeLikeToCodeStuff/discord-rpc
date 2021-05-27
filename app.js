@@ -34,7 +34,7 @@ app.get('/chillwav', (req, res) => {
           ];
         activity.assets = assets;
         const fetch = require('node-fetch');
-               
+
                async function loadFileAndDoStuff(url) {
     try {
         const response = await fetch(url);
@@ -59,11 +59,11 @@ app.get('/chillwav', (req, res) => {
             client.on('ready', () => {
                 client.request('SET_ACTIVITY', {
                     pid: process.pid,
-                    activity: activity   
+                    activity: activity
             })});
             console.log('Presence Sent')
             client.login({ clientId: '826874981828132905' })
-     
+
         console.log()
         var obj = JSON.stringify(data)
 
@@ -88,8 +88,8 @@ app.post('/custom', (req, res) => {
             if (req.body.btncnt == '1') {
               activity.buttons = [
             {
-              "label": res.body.btnatxt,
-              "url": res.body.btnaurl
+              "label": req.body.btnatxt,
+              "url": req.body.btnaurl
             }
           ];
             }
@@ -103,22 +103,22 @@ app.post('/custom', (req, res) => {
               "label": req.body.btnbtxt,
               "url": req.body.btnburl
             }
-                 
+
           ];
             } else if (req.body.btncnt > 2) {
                 console.log('We all wish Discord supported more than 2 buttons. I have set the button count to 0.')
             } else if (isNaN(req.body.btncnt)) {
-               console.log(req.body.btncnt + ' doesnt appear to be a number. I have set the button count to 0.') 
-            } 
+               console.log(req.body.btncnt + ' doesnt appear to be a number. I have set the button count to 0.')
+            }
             client.on('ready', () => {
                 client.request('SET_ACTIVITY', {
                     pid: process.pid,
-                    activity: activity   
+                    activity: activity
             })});
             console.log('Presence Sent')
             client.login({ clientId: req.body.ID })
     console.log('status set')
     res.sendStatus(200);
 });
-app.listen(80);
-console.log('Listening on port: 80\n©' + new Date().getFullYear() + 'NeonDevelopment, SkepSickomode');
+app.listen(8080);
+console.log('Listening on port: 8080\n© ' + new Date().getFullYear() + ' NeonDevelopment, SkepSickomode');
