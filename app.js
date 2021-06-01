@@ -110,6 +110,7 @@ app.post('/custom', (req, res) => {
             } else if (isNaN(req.body.btncnt)) {
                console.log(req.body.btncnt + ' doesnt appear to be a number. I have set the button count to 0.')
             }
+            activity.assets = assets;
             client.on('ready', () => {
                 client.request('SET_ACTIVITY', {
                     pid: process.pid,
