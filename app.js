@@ -119,7 +119,7 @@ app.post('/custom', (req, res) => {
             console.log('Presence Sent')
             client.login({ clientId: req.body.ID })
     console.log('status set')
-    res.sendStatus(200);
+    res.render('response');
 });
 app.listen(8080);
 console.log('Listening on port: 8080\n© ' + new Date().getFullYear() + ' NeonDevelopment, SkepSickomode');
