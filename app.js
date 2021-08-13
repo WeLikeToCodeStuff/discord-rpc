@@ -7,19 +7,18 @@ const bodyParser = require('body-parser');
         const assets = {}
 const fetch = require('node-fetch');
 
-// set the view engine to ejs
+// Set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// use res.render to load up an ejs view file
+// Use res.render to load up an ejs view file
 
-// index page
+// Index page
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function(req, res) {
     res.render('index');
 });
 
 app.get('/chillwav', (req, res) => {
-    //console.log('it works');
         assets.large_image = 'logo';
         assets.large_text = 'ChillWav Radio';
         activity.buttons = [
